@@ -3,6 +3,7 @@ FROM $DOCKER_NOTEBOOK_IMAGE
 
 ARG JUPYTERHUB_VERSION
 RUN python3 -m pip install --no-cache jupyterhub==$JUPYTERHUB_VERSION
+RUN pythno3 -m pip install --upgrade jupyter_core jupyter_client
 RUN /opt/conda/bin/conda install -c conda-forge nbgrader
 USER root
 
