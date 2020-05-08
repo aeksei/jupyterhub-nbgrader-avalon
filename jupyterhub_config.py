@@ -103,7 +103,7 @@ c.DockerSpawner.volumes = { 'jupyterhub-user-{username}': home_dir ,
         'nbgrader-exchange' : '/srv/nbgrader/exchange', 
         os.environ['COURSE_HOME'] : '/srv/nbgrader/%s' % course_name}
 
-c.DockerSpawner.extra_create_kwargs.update({ 'volume_driver': 'local' })
+# c.DockerSpawner.extra_create_kwargs.update({ 'volume_driver': 'local' })
 # Remove containers once they are stopped
 c.DockerSpawner.remove_containers = True
 # For debugging arguments passed to spawned containers
