@@ -25,8 +25,7 @@ groupadd -g 15000 instructor
 useradd instructor -u 15000 -g 15000
 
 cp nbgrader-sample.env nbgrader.env
-sed -i 's/COURSE_HOME=<absolute path of nbgrader compatible course directory.>/COURSE_HOME=\/home\/aeksei\/jupyterhub-deploy-docker/g' nbgrader.env
-
+sed -i 's/COURSE_HOME=<absolute path of nbgrader compatible course directory.>/COURSE_HOME=\/home\/aeksei\/jupyterhub-nbgrader-avalon\/nbgrader_hello_world/g' nbgrader.env
 sed -i 's/INSTRUCTOR_UID=1001/INSTRUCTOR_UID=15000/g' nbgrader.env
 sed -i 's/INSTRUCTOR_GID=1001/INSTRUCTOR_GID=15000/g' nbgrader.env
 
