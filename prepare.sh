@@ -4,9 +4,9 @@ mkdir -p secrets && cd secrets
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout jupyterhub.key -out jupyterhub.crt
 
 touch oauth.env
-echo "GITHUB_CLIENT_ID=58a178f9896a95b7d712" >> oauth.env
-echo "GITHUB_CLIENT_SECRET=913df72205c5f97f5d29fea42e0565e33d0ade8d" >> oauth.env
-echo "OAUTH_CALLBACK_URL=https://10.211.55.13:443/hub/oauth_callback" >> oauth.env
+echo $GITHUB_CLIENT_ID >> oauth.env
+echo $GITHUB_CLIENT_SECRET >> oauth.env
+echo $OAUTH_CALLBACK_URL >> oauth.env
 
 cd ..
 
