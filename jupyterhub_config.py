@@ -91,7 +91,8 @@ c.DockerSpawner.extra_host_config = { 'network_mode': network_name }
 
 # Explicitly set notebook directory.
 home_dir = '/home/{username}'
-notebook_dir = os.path.join(home_dir, notebook_dir_relative)
+notebook_dir = home_dir
+#notebook_dir = os.path.join(home_dir, notebook_dir_relative)
 c.DockerSpawner.notebook_dir = notebook_dir
 
 # Mount the user's Docker volume on the host to the home directory in the container.
