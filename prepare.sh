@@ -5,8 +5,8 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout jupyterhub.key -out 
 
 touch oauth.env
 echo "GITHUB_CLIENT_ID=${GITHUB_CLIENT_ID}" >> oauth.env
-echo "GITHUB_CLIENT_SECRET=$GITHUB_CLIENT_SECRET}" >> oauth.env
-echo "OAUTH_CALLBACK_URL=$OAUTH_CALLBACK_URL}" >> oauth.env
+echo "GITHUB_CLIENT_SECRET=${GITHUB_CLIENT_SECRET}" >> oauth.env
+echo "OAUTH_CALLBACK_URL=${OAUTH_CALLBACK_URL}" >> oauth.env
 
 cd ..
 
