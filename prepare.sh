@@ -31,3 +31,5 @@ sed -i 's/INSTRUCTOR_GID=1001/INSTRUCTOR_GID=15000/g' nbgrader.env
 
 sed -i 's/STUDENT_UID=10000/STUDENT_UID=5000/g' nbgrader.env
 sed -i 's/STUDENT_GID=10000/STUDENT_GID=5000/g' nbgrader.env
+
+chmod -R 777 ./nbgrader_hello_world
