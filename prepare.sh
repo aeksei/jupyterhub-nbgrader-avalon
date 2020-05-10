@@ -27,8 +27,8 @@ useradd instructor -u 15000 -g 15000
 cp nbgrader-sample.env nbgrader.env
 sed -i 's/COURSE_HOME=<absolute path of nbgrader compatible course directory.>/COURSE_HOME=\/home\/aeksei\/jupyterhub-deploy-docker/g' nbgrader.env
 
-sed -i 's/INSTRUCTOR_UID=1001/INSTRUCTOR_UID=5000/g' nbgrader.env
-sed -i 's/INSTRUCTOR_GID=1001/INSTRUCTOR_GID=5000/g' nbgrader.env
+sed -i 's/INSTRUCTOR_UID=1001/INSTRUCTOR_UID=15000/g' nbgrader.env
+sed -i 's/INSTRUCTOR_GID=1001/INSTRUCTOR_GID=15000/g' nbgrader.env
 
-sed -i 's/STUDENT_UID=10000/STUDENT_UID=15000/g' nbgrader.env
-sed -i 's/STUDENT_GID=10000/STUDENT_GID=15000/g' nbgrader.env
+sed -i 's/STUDENT_UID=10000/STUDENT_UID=5000/g' nbgrader.env
+sed -i 's/STUDENT_GID=10000/STUDENT_GID=5000/g' nbgrader.env
