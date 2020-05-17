@@ -48,6 +48,7 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_HOST: hub-db
     env_file:
+      - nbgrader.env
       - secrets/postgres.env
       - secrets/oauth.env
     command: >
