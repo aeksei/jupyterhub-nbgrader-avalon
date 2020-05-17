@@ -2,9 +2,10 @@ ARG DOCKER_NOTEBOOK_IMAGE
 FROM $DOCKER_NOTEBOOK_IMAGE
 
 ARG JUPYTERHUB_VERSION
-RUN python3 -m pip install --no-cache jupyterhub==$JUPYTERHUB_VERSION
-RUN python3 -m pip install --upgrade jupyter_core jupyter_client
-RUN /opt/conda/bin/conda install -c conda-forge nbgrader
+RUN python3 -m pip install --no-cache jupyterhub==$JUPYTERHUB_VERSION && \
+    python3 -m pip install --upgrade jupyter_core jupyter_client && \
+    /opt/conda/bin/conda install -c conda-forge conda=4.8.3 && \
+    /opt/conda/bin/conda install -c conda-forge nbgrader jupyterlab=$JUPYTERLAB_VERSION
 USER root
 
 COPY ./bin/start-custom.sh /usr/local/bin
